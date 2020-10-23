@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script src="js/jquery-3.5.1.js"></script>
+   
+</head>
+<style type="text/css">
+  
+  .mydivs {
+    border: 2px solid blue;
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .mycube {
+    width: 50px;
+    height: 50px;
+    background-color: blueviolet;
+    opacity: 0.6;
+    position: absolute;
+    padding: 20px;
+  }
+
+</style>
+<body>
+
+    <h2 >Effects in jQuery - Animate Effects</h2>
+
+    <p>This is paragraph outside divison</p>
+
+    <button id="btn1">Click Me 1</button>
+    <button id="btn2">Click Me 2</button>
+    <button id="btn3">Animate</button>
+    
+    <div class="mydivs" id="firstdiv">
+      <p>This is first paragraph in first divison</p>
+      <p>This is second paragraph in first divison</p>
+    </div>
+
+    <div class="mydivs" id="seconddiv">
+      <p>This is third paragraph in second divison</p>
+    </div>
+
+    <div class="mydivs" id="thirddiv">
+      <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+      </ul>
+    </div>
+
+    <div class="mycube" id="cube">
+      <p>CUBE</p>
+    </div>
+    
+     <script>
+
+        $(document).ready(function () {
+
+           $("#btn3").click(function() {
+              
+               $("#cube").animate({
+                  left:'150px',
+                  opacity:'1',
+                  width:'100px',
+                  height:'100px'
+                },1000)
+             /*  $("#cube").animate({
+                  left:'150px',
+                  opacity:'1',
+                  width:'100px',
+                  height:'100px'
+                },3000) 
+               $("#cube").animate({
+                  left:'150px',
+                  opacity:'1',
+                  width:'100px',
+                  height:'100px'
+                },'slow')   
+               $("#cube").animate({
+                  left:'150px',
+                  opacity:'1',
+                  width:'100px',
+                  height:'100px'
+                },'fast')          */
+
+           });
+
+        });
+    </script>
+
+
+</body>
+</html>

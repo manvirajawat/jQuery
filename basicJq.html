@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Set Up jQuery</title>
+	<script src="js/jquery-3.5.1.js"></script>
+   
+</head>
+<body>
+
+    <h2 id="heading1">Setting Up jQuery</h2>
+    <button id="btn1" onclick="fn1()">Click Me</button>
+    <p id="test">This is a paragraph.</p>
+
+     <script>
+  	    function fn1() {
+  		   //alert("function called....");
+  		   $("#heading1").fadeToggle(2000);
+  		   //-----fadeOut and fadeIn function property called by using this-----
+  	    }
+    </script>
+    
+    <script>
+    	$(document).ready(function() {
+    		$("#test").click(function() {
+    		   //alert("clicked");
+    		   $(this).hide();
+    	    });
+
+    	});
+
+    	/*document.getElementById("test").onclick = function() {
+    		alert("clicked");
+    	}*/
+      
+    </script>
+
+
+</body>
+</html>

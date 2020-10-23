@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script src="js/jquery-3.5.1.js"></script>
+   
+</head>
+<!--
+  addClass() - Adds one or more classes to the selected elements
+  removeClass() - Removes one or more classes from the selected elements
+  toggleClass() - Toggles between adding/removing classes from the selected elements
+  css() - Sets or returns the style attribute
+-->
+<style type="text/css">
+  
+  .mydivs {
+    border: 2px solid blue;
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .newdivclass {
+    border-radius: 10px;
+    background-color: aqua;
+  }
+
+  .newparaclass {
+    font-weight: bold;
+    color: brown;
+  }
+
+</style>
+<body>
+
+    <h2 >jQuery - DOM manipulations</h2>
+
+    <button id="btn1">Add Class</button>
+    <button id="btn2">Remove Class</button>
+    <button id="btn3">Toggle Class</button>
+    <button id="btn4">CSS</button>
+    
+    <div class="mydivs" id="div1">
+      <p id="p1" class="p1class">This is first <b>paragraph</b> in <i>first</i> divison</p>
+    </div>
+    <div id="div2">
+      <p id="p2" class="p2class">This is second <b>paragraph</b> in <i>first</i> divison</p>
+    </div>
+
+     <script>
+
+        $(document).ready(function () {
+
+          $("#btn1").click(function() {
+               $("#div1").addClass("newdivclass newparaclass");
+          });
+          
+          $("#btn2").click(function() {
+               $("#div1").removeClass("newdivclass newparaclass");
+          });
+
+          $("#btn3").click(function() {
+               $("#div1").toggleClass("newdivclass newparaclass");
+          });
+
+        });
+
+        $("#btn4").click(function() {
+               // alert($("#div1").css("padding"));    // check value here
+               // alert($("#div1").css("font-size"));
+
+               $("#div1").css("font-size","20px");     // set value here
+          });
+
+    </script>
+
+
+</body>
+</html>

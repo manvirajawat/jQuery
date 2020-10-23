@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Set Up jQuery</title>
+	<script src="js/jquery-3.5.1.js"></script>
+   
+</head>
+<style type="text/css">
+  
+  #heading1 {
+    color: blue;
+  }
+</style>
+<body>
+
+    <h2 id="heading1" class="head">Selectors Up jQuery</h2>
+    <h2 id="heading" class="head">Selectors Up jQuery</h2>
+    <h2 id="heading">Selectors Up jQuery</h2>
+
+    <div class="head">
+      <p>This is para</p>
+    </div>
+
+    <button id="btn1" onclick="fn1()">Click Me</button>
+    
+     <script>
+  	    
+        function fn1() {
+
+          // document.getElementId();
+          // $("h2").action();
+          //$("h2").fadeToggle(2000);
+          //$("#heading1").fadeToggle(2000);
+          //$("#heading").fadeToggle(2000);
+          $(".head").fadeToggle(2000);
+        }
+    </script>
+
+
+</body>
+</html>

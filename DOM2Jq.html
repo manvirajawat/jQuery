@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script src="js/jquery-3.5.1.js"></script>
+   
+</head>
+<style type="text/css">
+  
+  .mydivs {
+    border: 2px solid blue;
+    margin: 5px;
+    padding: 10px;
+  }
+
+</style>
+<body>
+
+    <h2 >jQuery - DOM manipulations</h2>
+
+    <button id="btn1">Set value</button>
+    <button id="btn2">Get value</button>
+    
+    <div class="mydivs" id="div1">
+      <p id="p1" value="Hello World" class="p1class">This is first <b>paragraph</b> in <i>first</i> divison</p>
+    </div>
+
+     <script>
+
+        $(document).ready(function () {
+
+          $("#btn1").click(function() {
+
+              //alert($('#p1').attr("class"));
+              //$('#p1').attr("class" , "p2class");     // set value here
+              $('#p1').css("font-size" , "25px");
+
+          });
+
+          $("#btn2").click(function() {
+
+              //alert($('#p1').attr("class"));         // check value set by above
+              //$('#p1').attr("class" , "p2class");
+
+              alert($('#p1').css("font-size")); 
+
+          });
+
+        });
+
+    </script>
+
+
+</body>
+</html>

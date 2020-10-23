@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+
+      <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css">
+      <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.structure.css">
+      <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.theme.css">
+
+      <style type="text/css">
+        
+        .cube {
+          width: 100px;
+          height: 100px;
+          background-color: aqua;
+          padding: 20px;
+          margin: 20px;
+        }
+        
+      </style>
+
+</head>
+
+<body>
+
+    <h2>Draggable Interaction in jQuery-UI</h2>
+    <div style="border: 1px solid black">
+      <div class="cube">
+        <h3> CUBE 1 </h3>
+      </div>
+      <div class="cube">
+        <h3> CUBE 2 </h3>
+      </div>
+    </div>
+
+</body>
+    
+      <script src="js/jquery-3.5.1.js" type="text/javascript"></script>
+      <script src="jquery-ui/jquery-ui.js" type="text/javascript"></script>
+
+      <script>
+
+          $(".cube").draggable ({
+
+             // axis: "x",
+             // axis: "y",
+             // containment: "parent",     
+             //---bcoz of this it only drag under div---
+             containment: "document",
+             //---bcoz of this it drag under and outoff div---
+             cursor: "grabbing",
+             opacity: 0.5,
+             //grid: [300, 300],       
+             //---due to this dragging is done in grid of 300px and move---
+             snap: true,
+             snapTolerance: 30,
+             //---due to this dragging div get snap(attached) when they r apart from 30px---
+            
+          });
+
+      </script>
+      
+</html>

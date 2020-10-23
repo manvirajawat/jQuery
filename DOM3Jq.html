@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script src="js/jquery-3.5.1.js"></script>
+   
+</head>
+<!--
+   append() - Insert content at the end of the selected elements
+   prepend() - Insert content at the beginning of the selected elements
+   after() - Insert content after the selected elements
+   before() - Insert content before the selected elements
+   remove() - Removes the selected element (and its child elements)
+   empty() - Removes the child elements from the selected elements
+-->
+<style type="text/css">
+  
+  .mydivs {
+    border: 2px solid blue;
+    margin: 5px;
+    padding: 10px;
+  }
+
+</style>
+<body>
+
+    <h2 >jQuery - DOM manipulations</h2>
+
+    <button id="btn1">Append</button>
+    <button id="btn2">After</button>
+    <button id="btn3">Prepend</button>
+    <button id="btn4">Before</button>
+    <button id="btn5">Remove</button>
+    <button id="btn6">Empty</button>
+    
+    <div class="mydivs" id="div1">
+      <p id="p1" class="p1class">This is first <b>paragraph</b> in <i>first</i> divison</p>
+      <p id="p2" class="p2class">This is second <b>paragraph</b> in <i>first</i> divison</p>
+    </div>
+
+     <script>
+
+        $(document).ready(function () {
+
+          $("#btn1").click(function() {
+                
+                $("#div1").append("<p><b>This paragraph added after 1st paragraph in first divison</b></p>");
+              
+          });
+
+          $("#btn2").click(function() {
+                
+                $("#div1").after("<p><b>This paragraph added after first divison</b></p>");
+              
+          });
+
+          $("#btn3").click(function() {
+                
+                $("#div1").prepend("<p><b>This paragraph added before 1st paragraph in first divison</b></p>");
+              
+          });
+
+          $("#btn4").click(function() {
+                
+                $("#div1").before("<p><b>This paragraph added before first divison</b></p>");
+              
+          });          
+
+          $("#btn5").click(function() {
+                
+                // $("#div1").remove();
+                // $("p").remove("#p2");
+                // $("p").remove("#p2, #p1");    //---id used here---
+                $("p").remove(".p1class");       //---class used here---
+              
+          });
+
+          $("#btn6").click(function() {
+                
+                $("#div1").empty();
+              
+          });
+
+
+        });
+
+    </script>
+
+
+</body>
+</html>

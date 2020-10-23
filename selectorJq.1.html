@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Set Up jQuery</title>
+	<script src="js/jquery-3.5.1.js"></script>
+   
+</head>
+<style type="text/css">
+  
+  .mydivs {
+    border: 2px solid blue;
+    margin: 5px;
+    padding: 10px;
+  }
+
+  div p {
+    color : red;
+  }
+  
+  
+</style>
+<body>
+
+    <h2 >Selectors Up jQuery</h2>
+
+    <p>This is paragraph outside divison</p>
+    
+    <div class="mydivs" id="firstdiv">
+      <p>This is first paragraph in first divison</p>
+      <p>This is second paragraph in first divison</p>
+    </div>
+
+    <div class="mydivs" id="seconddiv">
+      <p>This is third paragraph in second divison</p>
+    </div>
+
+    <div class="mydivs" id="thirddiv">
+      <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+      </ul>
+    </div>
+
+    <div>
+      <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+      </ul>
+    </div>
+
+    <button id="btn1" onclick="fn1()">Click Me</button>
+    
+     <script>
+  	    
+        function fn1() {
+          
+         // $("div").fadeToggle(3000);
+         // $("#firstdiv,#seconddiv").fadeToggle(3000);
+         // $("#firstdiv,p").fadeToggle(3000);
+         // $("#firstdiv,p,li").fadeToggle(3000);
+         // $(".mydivs").fadeToggle(3000);
+         // $("p").fadeToggle(3000);
+         // $("div > p").fadeToggle(3000);
+         // $("div p").fadeToggle(3000);
+         // $("p:first").fadeToggle(3000);
+         // $(".mydivs:first").fadeToggle(3000);
+         // $(".mydivs:last").fadeToggle(3000);
+         // $(".mydivs:even").fadeToggle(3000);
+         // $("li:even").fadeToggle(3000);
+         $("li:odd").fadeToggle(3000);
+
+        }
+    </script>
+
+
+</body>
+</html>

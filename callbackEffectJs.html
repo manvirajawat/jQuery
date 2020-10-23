@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script src="js/jquery-3.5.1.js"></script>
+   
+</head>
+<style type="text/css">
+  
+  .mydivs {
+    border: 2px solid blue;
+    margin: 5px;
+    padding: 10px;
+  }
+
+  div p {
+    color: darkcyan;
+  }
+
+  .mycube {
+    width: 50px;
+    height: 50px;
+    background-color: blueviolet;
+    opacity: 0.6;
+    position: absolute;
+    padding: 20px;
+  }
+
+</style>
+<body>
+
+    <h2 >Callback and Chaining Effects in jQuery</h2>
+
+    <p>This is paragraph outside divison</p>
+
+    <button id="btn1">Toggle</button>
+    
+    <div class="mydivs" id="firstdiv">
+      <p>This is first paragraph in first divison</p>
+      <p>This is second paragraph in first divison</p>
+    </div>
+
+    <div class="mydivs" id="seconddiv">
+      <p>This is third paragraph in second divison</p>
+    </div>
+
+
+    
+     <script>
+
+        $(document).ready(function () {
+
+          $("#btn1").click(function() {
+
+              /* $("#firstdiv").fadeToggle(5000, function() {
+                  alert("Divison is faded");
+              });  */
+
+              /* function printMsg() {
+
+                  alert("Effect Done");
+
+              }
+
+              $("#firstdiv").slideToggle(3000,printMsg);  */
+
+              /* $("#firstdiv").slideUp(2000);
+              $("#firstdiv").slideDown(2000); */
+
+              // for above 2 line the below single line is used
+
+              $("#firstdiv").slideUp(2000).slideDown(2000).fadeOut(3000).fadeIn(3000);   
+        // called chaining effect, workflow from left to right
+              
+          });
+
+        });
+    </script>
+
+
+</body>
+</html>
